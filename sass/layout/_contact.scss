@@ -1,0 +1,76 @@
+#contact-container {
+  height: fit-content;
+  margin-bottom: 4rem;
+  padding-top: 5rem;
+}
+
+.contact {
+  width: 100%;
+
+  &-heading {
+    text-align: center;
+    padding-bottom: 60px;
+    text-transform: uppercase;
+
+    &_title {
+      font-size: 12px;
+    }
+  }
+
+  &-icon {
+    fill: $color;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &.userpic2 {
+    width: 30rem;
+
+    @include respond(phone) {
+      width: 25rem;
+    }
+
+    @include respond(laptop) {
+      margin-right: 3%;
+    }
+  }
+
+  &-subtitle_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    padding: 0 7rem 3rem 7rem;
+
+    &_box {
+      height: 200px;
+      background-color: white;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
+      box-shadow: $box-shadow;
+
+      &__logo {
+        margin-bottom: 1rem;
+      }
+      &__content {
+        text-align: center;
+      }
+      &__heading {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.contact.about-detail_paragraph {
+  text-align: center;
+}

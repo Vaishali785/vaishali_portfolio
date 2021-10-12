@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 8% 0 6%;
+  }
+}
+
+@keyframes slide {
+  100% {
+    top: -8rem;
+  }
+}
+
+/*-----------------------------after -----------------------------*/
+.typing {
+  height: 2rem;
+  overflow: hidden;
+}
+
+.typing > li {
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  list-style: none;
+}
+
+.intro-word {
+  top: -1px;
+  height: 2rem;
+  //   padding-bottom: 4.5rem;
+  animation: slide 9s steps(2) infinite;
+}
+
+.intro-word {
+  font-size: 1.5rem;
+  font-family: cursive;
+  color: $color; //linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  //   -webkit-text-fill-color: transparent;
+  //   -webkit-background-clip: text;
+  //   background-clip: text;
+  display: inline-flex;
+  position: relative;
+  padding-bottom: 2.2rem;
+  font-weight: 700;
+}
+
+.intro-word::after {
+  content: "";
+  position: absolute;
+  background: white;
+  left: 0;
+  height: 100%;
+  width: 110%;
+  border-left: blue solid 2px;
+  animation: typing 3s steps(11) infinite;
+}

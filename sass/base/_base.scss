@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*-------------------------media queries--------------------------*/
+@mixin respond($device) {
+  //here normal desktop
+
+  @if ($device== laptop) {
+    @media only screen and (min-width: 72rem) {
+      @content;
+    }
+  }
+
+  @if ($device== tab) {
+    @media only screen and (min-width: 50rem) and (max-width: 71rem) {
+      @content;
+    }
+  }
+  @if ($device== phone) {
+    @media only screen and (max-width: 50rem) {
+      @content;
+    }
+  }
+}
+
+body[theme=""] {
+  background-color: $color-white-shade-bg;
+  width: 100%;
+  overflow-x: hidden;
+
+  .up-button-icon {
+    fill: white;
+    width: 2rem;
+    height: 2rem;
+  }
+  [id$="-container"] {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+h1 {
+  font-family: "ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}

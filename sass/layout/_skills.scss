@@ -1,0 +1,84 @@
+#skills-container {
+  height: fit-content;
+  padding-top: 6rem;
+}
+.skills {
+  width: 100vw;
+
+  &-heading {
+    text-align: center;
+    padding-bottom: 4rem;
+    text-transform: uppercase;
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 3.5rem;
+    padding: 0 7rem 3rem 7rem;
+    font-family: "system-ui";
+    font-weight: 500;
+
+    .skill-box_text {
+      padding-bottom: 0.6rem;
+    }
+    .skill-name {
+      position: absolute;
+    }
+    .skill-percent {
+      position: relative;
+
+      &.html {
+        left: 80%;
+      }
+      &.css {
+        left: 85%;
+      }
+      &.js {
+        left: 70%;
+      }
+      &.react {
+        left: 45%;
+      }
+      &.sass {
+        left: 75%;
+      }
+    }
+  }
+  .skill-bar {
+    height: 0.65rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.225rem 0.295rem rgba(0, 0, 0, 0.8);
+
+    &_color {
+      background-color: $color;
+      height: 0.65rem;
+      border-radius: 1rem;
+
+      &.html {
+        width: 80%;
+      }
+      &.css {
+        width: 85%;
+      }
+      &.js {
+        width: 70%;
+      }
+      &.react {
+        width: 45%;
+      }
+      &.sass {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .skills {
+    &-content {
+      display: grid;
+      grid-template-columns: 100%;
+    }
+  }
+}

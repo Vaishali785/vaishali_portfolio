@@ -1,0 +1,281 @@
+<!-- 31st Aug 2021 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./icons/icomoon/style.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body theme>
+    <header>
+        <div class="header">
+            <a href='#' class="logo">portfolio</a>
+            <nav class="navigation" id='nav'>
+                <a class="nav-option" onclick="Fun()" href='index.html#home-container' onclick="funtry()">home</a>
+                <a href='index.html#about-container' onclick="Fun()" class="nav-option">about</a>
+                <a class="nav-option" href='index.html#services-container' onclick="Fun()" class="nav-option">services</a></a>
+                <a class="nav-option" href='index.html#skills-container' onclick="Fun()">skills</a>
+                <a class="nav-option" href='index.html#portfolio-container' onclick="Fun()">portfolio</a>
+                <a class="nav-option" href='index.html#contact-container' onclick="Fun()">contact</a>
+                <input type='checkbox' id='toggle' class="toggle" onclick="toggle()"/>
+                <label class="toggle-container" for='toggle'>        
+                    <div class="toggle-switch">
+                        <svg class="toggle-icon">
+                            <use xlink:href="./icons/used_files/sprite.svg#icon-sun"></use>
+                        </svg>
+                    </div>
+                </label>
+            </nav> 
+
+            <input type="checkbox" class="ham-button" id="ham-button" onclick="hamClick()" />
+            <label for="ham-button">
+                <div class="ham-logo">
+                    <div class="ham-dash d1"></div>
+                    <div class="ham-dash d2"></div>
+                    <div class="ham-dash d3"></div>
+                </div>
+                <div class="ham-bgcolor"/>
+            </label>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="home-container">
+            <div class="home">
+            <div class="intro">
+                <p class="hello">Hello I'm</p>
+                <h1 class='name'>Vaishali Aggarwal</h1>
+                <div class="role"><div class="static-word">And I'm a</div> 
+                    <ul class='typing'>
+                        <li><span class="intro-word">Developer</span></li>
+                        <li><span class="intro-word">Freelancer</span></li>
+                    </ul>
+                    </div>
+                <button class="primary-button" onclick="window.location.href='#contact-container'">
+                Contact me</button>
+            </div>
+
+            <div class="user-pic-background">
+                <img src='./images/prof2.jpg' alt='user-pic' class='user-pic'>
+            </div>
+
+            </div>
+        </section>
+
+        <section id="about-container"> 
+            <div class="about">
+            <div class="about-heading">
+                <h1 class="about-heading_title"><a name="about">About me</a></h1>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <img src='./images/5293-removebg-preview2.png' class="about-vector"/>
+                </div>
+
+                <div class="about-detail">
+                    <h3 class="about-detail_title">I'm a web developer</h3>
+                    <p class="about-detail_paragraph">I'm a self learned developer currently living in India. I love turning exciting ideas into beautiful products.</p>
+                        <p class="about-detail_paragraph">I am looking forward to provide my services to help others.<br> My expertise are in Frontend development.My goal is to provide high quality services to my clients and follow-up support after the completion of the project.</p>
+                    <button class="primary-button" onclick="window.location.href='#portfolio-container'">My Work &rarr;</button>
+                </div>
+
+            </div>
+            
+            </div>
+        </section>
+
+        <a href="#" class="sticky-button" id='scroll-up'>
+            <svg class="up-button-icon">
+                <use xlink:href="./icons/used_files/sprite2.svg#icon-circle-up"></use>
+            </svg>
+        </a>
+
+        <section id="services-container">
+            <div class="services">
+                <div class="services-heading">
+                    <h1 class="services-heading_title"><a name="services">My services</a></h1>
+                </div>
+
+                
+                <div class="services-content">                    
+                    <div class="services-content_box">
+                    <div class="services-content_box__logo">
+                        <svg class="icon services-content_icon">
+                            <use xlink:href="./icons/used_files/sprite.svg#icon-laptop"></use>
+                        </svg>
+                    </div>
+                    <div class="services-content_box__content">
+                        <h3 class="services-content_box__heading">Frontend Developer</h3>
+                        <p class="services-content_box__paragraph">
+                            I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="services-content_box">
+                        <div class="services-content_box__logo">
+                            <svg class="services-content_phone-icon">
+                                <use xlink:href="./icons/used_files/sprite.svg#icon-mobile-devices"></use>
+                            </svg>
+                        </div>
+                        <div class="services-content_box__content">
+                            <h3 class="services-content_box__heading">Responsive Design</h3>
+                            <p class="services-content_box__paragraph">
+                                Responsive design allows your website to easily adapt to the screen size of the device it's being viewed on.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="services-content_box">
+                        <div class="services-content_box__logo">
+                            <svg class="services-content_icon">
+                                <use xlink:href="./icons/used_files/sprite.svg#icon-embed2"></use>
+                            </svg>
+                        </div>
+                        <div class="services-content_box__content">
+                            <h3 class="services-content_box__heading">Clean Code</h3>
+                            <p class="services-content_box__paragraph">
+                                Code that is readable, understandable, not over complicated and does well what is intended to do.                            </p>
+                        </div>
+                    </div>
+
+                    <div class="services-content_box">
+                        <div class="services-content_box__logo">
+                            <svg class="services-content_icon">
+                                <use xlink:href="./icons/used_files/sprite.svg#icon-bullhorn"></use>
+                            </svg>
+                        </div>
+                        <div class="services-content_box__content">
+                            <h3 class="services-content_box__heading">Great Support</h3>
+                            <p class="services-content_box__paragraph">
+                                Customer satisfaction is the top priority, and hopefully creating loyal, returning customers.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="skills-container">
+            <div class="skills">
+                <div class="skills-heading">
+                    <h1 class="skills-heading_title"><a name="skills">My Skills</a></h1>
+                </div>
+
+                <div class="skills-content">
+                    <div class="skill-box">
+                        <div class="skill-box_text">
+                            <div class="skill-name">HTML5</div>
+                            <div class="skill-percent  html">80%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar_color html"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-box_text">
+                            <div class="skill-name">CSS3</div>
+                            <div class="skill-percent css">85%</div>
+                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar_color css"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-box_text">
+                            <div class="skill-name">JS</div>
+                            <div class="skill-percent js">70%</div>
+                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar_color js"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-box_text">
+                            <div class="skill-name">React</div>
+                            <div class="skill-percent react">45%</div>
+                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar_color react"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-box_text">
+                            <div class="skill-name">SASS</div>
+                            <div class="skill-percent sass">75%</div>
+                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar_color sass"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio-container">
+        <div class="portfolio">
+            <a id="portfolio"></a>
+            <div class="portfolio-heading">
+                <h1 class="portfolio-heading_subtitle">latest works</h1>
+            </div>
+
+            <div class="portfolio-content">
+                <div class="portfolio-content_box">
+                        <img src='./images/natours.png' class='portfolio-image natours' height="200px" width='290px'/>
+                        <p class="portfolio-name">Natours</p>
+                        <a href="https://github.com/Vaishali785/Natours" class="primary-button explore">Explore</a>
+                </div>
+                <div class="portfolio-content_box">
+                    <img src='./images/drum.png' class='portfolio-image drum' height="200px" width='290px'/>
+                        <p class="portfolio-name">Drum Kit</p>
+                        <a href="https://vaishali785.github.io/Drum-Kit/" class="primary-button explore">Explore</a>
+        
+                </div>
+                <div class="portfolio-content_box">
+                    <img src='./images/gym.png' class='portfolio-image drum' height="200px" width='290px'/>
+                        <p class="portfolio-name">Fitness</p>
+                        <a hrf='https://vaishali785.github.io/Fitness/' class="primary-button explore">Explore</a>
+                </div>
+            </div>
+                
+            </div>
+        </section> 
+
+        <section id="contact-container">
+            <div class="about-heading">
+                <h1 class="about-heading_title"><a name="about">Get in Touch</a></h1>
+            </div>
+    
+            <div class="about-content">
+                <div class="contact-image">
+                    <img src='./images/20943953-removebg-preview.png' class="contact userpic2"/>
+                </div>
+    
+                <div class="about-detail">
+                    <h3 class="contact about-detail_paragraph">
+                        <p class="about-detail_paragraph__question">Wanna get in touch or talk about a project?</p><br>
+                        <p class="about-detail_paragraph__talk">Feel free to contact me via email at</p> 
+                        <a href="mailto:aggarwal.vaishali785@gmail.com" class="about-detail_paragraph__email">aggarwal.vaishali785@gmail.com</a>
+                    </h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+</body>
+
+</html>

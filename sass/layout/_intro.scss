@@ -1,0 +1,95 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 85vh;
+  line-height: 1.4;
+  padding-left: 4rem;
+}
+
+.hello,
+.role {
+  font-size: 1.3rem;
+}
+
+.name {
+  color: $color;
+  font-size: 2.5rem;
+  margin: 0.3rem 0;
+}
+
+.user-pic-background {
+  width: 25%;
+  border-radius: 0rem 2rem;
+  margin-right: 5rem;
+}
+.user-pic {
+  width: 85%;
+  height: 100%;
+  border-radius: 1rem 4rem;
+  border: $color solid 2px;
+
+  @include respond(tab) {
+    width: 90%;
+    border-radius: 1rem 4rem 1rem;
+  }
+}
+
+.role {
+  display: inline-flex;
+}
+
+/*-----------------------------typing-----------------------------*/
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 8% 0 6%;
+  }
+}
+
+@keyframes slide {
+  100% {
+    top: -5rem;
+  }
+}
+
+.typing {
+  height: 2rem;
+  overflow: hidden;
+}
+
+.typing > li {
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  list-style: none;
+}
+
+.intro-word {
+  top: -1px;
+  height: 2rem;
+  //   padding-bottom: 4.5rem;
+  animation: slide 6s steps(2) infinite;
+}
+
+.intro-word {
+  font-size: 1.5rem;
+  font-family: cursive;
+  color: $color;
+  display: inline-flex;
+  position: relative;
+  padding-bottom: 2.2rem;
+  font-weight: 700;
+}
+
+.intro-word::after {
+  content: "";
+  position: absolute;
+  background: white;
+  left: 0;
+  height: 100%;
+  width: 110%;
+  border-left: $color solid 2px;
+  animation: typing 3s steps(11) infinite;
+}

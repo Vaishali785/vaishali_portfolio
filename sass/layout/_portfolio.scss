@@ -1,0 +1,101 @@
+#portfolio-container {
+  height: fit-content;
+  padding-top: 5rem;
+}
+
+.portfolio {
+  height: fit-content;
+
+  &-heading {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 4rem;
+    margin-top: 2rem;
+  }
+
+  &-image {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 16rem;
+    gap: 3rem;
+    padding: 0 7rem;
+
+    @include respond(tab) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &_box {
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 0.7rem;
+      box-shadow: 0 0.225rem 0.295rem rgba(0, 0, 0, 0.54);
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all 1s ease-in-out;
+
+        & .portfolio-image {
+          filter: blur(2px) brightness(45%);
+        }
+
+        & .explore {
+          display: block;
+          transform: scale(1) translateY(-50%) translateX(-50%);
+          transition: transform 0.8s cubic-bezier(0.4, 0, 1, 1);
+        }
+      }
+
+      &:hover .portfolio-name {
+        font-weight: 100;
+      }
+    }
+  }
+
+  &-name {
+    font-size: 1.1rem;
+    padding: 0.65rem 0;
+    text-align: center;
+    color: $color;
+    font-family: "Anonymous Pro";
+    font-weight: 600;
+  }
+}
+
+.explore {
+  transition: transform 0.7s ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  display: none;
+  transform: scale(0.8);
+
+  background-color: gainsboro;
+  -webkit-background-clip: text;
+  background-clip: text;
+  border: white solid;
+  color: white;
+  text-decoration: blue;
+}
+
+@include respond(phone) {
+  .portfolio {
+    width: 70%;
+    margin: auto;
+
+    &-content {
+      display: block;
+      padding: 0 5%;
+
+      &_box {
+        margin-bottom: 10%;
+      }
+    }
+  }
+}

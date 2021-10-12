@@ -1,0 +1,34 @@
+.primary-button {
+  background-color: $color; //-primary-dark;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5%;
+  margin-top: 10%;
+  cursor: pointer;
+
+  @include respond(phone) {
+    margin-top: 7%;
+  }
+}
+
+.sticky-button {
+  background-color: $color;
+  border: none;
+  padding: 0.6rem 0.5rem;
+  border-radius: 0.5rem;
+  position: fixed;
+  bottom: -8rem;
+  right: 3%;
+}
+
+.show-scroll {
+  bottom: 3rem;
+  transition: all 0.5s;
+}
+
+a.primary-button {
+  text-decoration: none;
+  margin-top: 5%;
+}

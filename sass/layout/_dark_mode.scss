@@ -1,0 +1,66 @@
+body[theme="dark"] {
+  background-color: #151414; //#212121;
+  color: whitesmoke;
+  overflow-x: hidden;
+
+  .header {
+    background-color: #2b2a29;
+
+    .nav-option:hover {
+      color: whitesmoke;
+      background-color: $color;
+    }
+
+    & {
+      .logo,
+      .ham-logo,
+      .ham-dash {
+        color: #f35f7f;
+      }
+    }
+  }
+
+  .home .into-word {
+    background: #f13e65;
+  }
+
+  .intro-word::after {
+    background-color: #151414;
+  }
+  .up-button-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: whitesmoke;
+  }
+  .about-vector {
+    border: whitesmoke dashed 1px;
+    border-radius: 2rem;
+  }
+
+  .services-content_box {
+    background-color: #ffffff00;
+    border: whitesmoke solid 1px;
+    box-shadow: 0.3rem 0.3rem 0.295rem 0px #92908b;
+  }
+
+  .skill-bar {
+    background-color: rgba(0, 0, 0, 0.88);
+    box-shadow: 0 0.225rem 0.295rem #666770cc;
+  }
+
+  .portfolio-content_box {
+    border: whitesmoke solid 1px;
+    box-shadow: 0 0.225rem 0.295rem rgba(146, 144, 138, 0.92);
+    background-color: #ffffff00;
+  }
+
+  .ham {
+    &-bgcolor {
+      background-image: linear-gradient(to right, #580b0b, #f13e80);
+    }
+  }
+
+  .navigation-list .nav-option:hover {
+    color: black;
+  }
+}

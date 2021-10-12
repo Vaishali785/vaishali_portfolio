@@ -1,0 +1,144 @@
+#services-container {
+  height: fit-content;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 7rem;
+}
+
+.services {
+  height: fit-content;
+
+  &-heading {
+    text-align: center;
+    padding-bottom: 4rem;
+    text-transform: uppercase;
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 3rem;
+    padding: 0 6rem;
+
+    @include respond(tab) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &_phone-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: white;
+    }
+
+    &_icon {
+      width: 2rem;
+      height: 2rem;
+      fill: white;
+      position: relative;
+      top: -4px;
+      left: -6px;
+
+      @include respond(phone) {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+
+    &_box {
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.07);
+
+      //for laptop and tab and not in mobile
+      @include respond(laptop) {
+        &:hover &__logo {
+          clip-path: circle(30rem at 0 0);
+        }
+
+        &:hover &__content {
+          color: whitesmoke;
+        }
+      }
+
+      @include respond(tab) {
+        &:hover &__logo {
+          clip-path: circle(30rem at 0 0);
+        }
+
+        &:hover &__content {
+          color: whitesmoke;
+        }
+      }
+
+      &__logo {
+        clip-path: circle(4rem at 0 0);
+        background-image: linear-gradient(45deg, $color, #f13e80);
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        position: initial;
+        z-index: -1;
+        transition: 0.3s linear;
+
+        @include respond(phone) {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index: 5;
+        position: relative;
+        top: -72%;
+        margin: 1.1rem;
+      }
+      &__heading {
+        padding-bottom: 0.7rem;
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .services {
+    &-content {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 2rem;
+      padding: 0 6rem;
+
+      &_phone-icon {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      &_box {
+        display: flex;
+        flex-direction: row;
+
+        &__logo {
+          width: 20%;
+          padding: 1rem;
+          z-index: 0;
+          clip-path: none;
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+        }
+
+        &__content {
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
