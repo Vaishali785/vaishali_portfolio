@@ -806,4 +806,17 @@ body[theme="dark"] {
   .skills-content{
    padding: 0 4rem 3rem 4rem; 
   }
+  .ham-logo{
+    left: 1.4rem;
+  }
+  .logo{
+   left: 30px; 
+  }
+  .portfolio{
+    width: 85%;
+  }
+}
+
+.sticky-button{
+  z-index: 9;
 }
