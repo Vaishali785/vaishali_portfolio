@@ -771,3 +771,14 @@ body[theme="dark"] {
   .skills-content {
     display: grid;
     grid-template-columns: 100%; } }
+
+
+@media screen and (max-width: 800px){
+  .skills-content .skill-percent{
+    display: inline;
+  }
+  .user-pic-background{
+    display: block;
+    margin-right: 0;
+  }
+}
