@@ -815,6 +815,9 @@ body[theme="dark"] {
   .portfolio{
     width: 85%;
   }
+  .about .about-vector{
+    border-radius: 15%;
+  }
 }
 
 .sticky-button{
