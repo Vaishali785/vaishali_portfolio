@@ -786,3 +786,24 @@ body[theme="dark"] {
     flex-direction: unset;
   }
 }
+
+
+@media screen and (max-width: 600px){
+.intro{
+  padding-left: 0;
+ }
+  .about-image{
+  width: 65%;
+  }
+  .about-detail{
+   width: 90%; 
+  }
+  
+  .services-content{
+    padding: 0 3rem;
+  }
+  
+  .skills-content{
+   padding: 0 4rem 3rem 4rem; 
+  }
+}
