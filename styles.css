@@ -777,6 +777,9 @@ body[theme="dark"] {
   .skills-content .skill-percent{
     display: inline;
   }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px){
   .user-pic-background{
     display: block;
     margin-right: 0;
