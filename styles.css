@@ -743,11 +743,14 @@ body[theme="dark"] {
       .skills-content .skill-percent.css {
         left: 85%; }
       .skills-content .skill-percent.js {
-        left: 70%; }
+        left: 75%; }
       .skills-content .skill-percent.react {
-        left: 45%; }
+        left: 60%; }
       .skills-content .skill-percent.sass {
         left: 75%; }
+      .skills-content .skill-percent.github{
+        left: 60%;      
+      }
   .skills .skill-bar {
     height: 0.65rem;
     border-radius: 1rem;
